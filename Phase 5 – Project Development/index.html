@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}PocketSmart AI{% endblock %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="eyebrow">GENAI · BUDGET · PERSONALIZATION</p>
+    <h1>Plan smarter. Spend better.</h1>
+    <p>PocketSmart AI creates budget-aware recommendations for home interiors, parties and jewelry, using Gemini and platform search links.</p>
+    {% if user %}<a class="btn" href="/dashboard">Open Dashboard</a>{% else %}<a class="btn" href="/register">Get Started</a>{% endif %}
+  </div>
+  <div class="hero-card"><div class="orb">₹</div><h3>One budget. Many possibilities.</h3><p>Compare ideas across shopping, food, venue and jewelry platforms.</p></div>
+</section>
+<section class="grid three">
+  <a class="card link-card" href="/home-planner"><h2>🏠 Home Interior</h2><p>Allocate your budget for rooms, lights, fans, furniture and dining needs.</p></a>
+  <a class="card link-card" href="/party-planner"><h2>🎉 Party Planner</h2><p>Plan venue, catering, decoration and entertainment by guest count.</p></a>
+  <a class="card link-card" href="/jewelry-planner"><h2>💎 Jewelry Planner</h2><p>Get occasion and style-matched jewelry with optional outfit image input.</p></a>
+</section>
+<section class="card">
+  <h2>How it works</h2>
+  <div class="steps"><span>1. Enter budget</span><span>2. Add preferences</span><span>3. Gemini analyzes</span><span>4. Explore recommendations</span></div>
+</section>
+<section class="card">
+  <h2>Testimonials</h2>
+  <div class="grid three"><p>“Simple way to organize a shopping budget.”</p><p>“The planner makes event costs easier to understand.”</p><p>“Useful for matching jewelry with an occasion.”</p></div>
+</section>
+{% endblock %}
